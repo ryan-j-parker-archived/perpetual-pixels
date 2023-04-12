@@ -1,3 +1,3 @@
 const openai = require('openai');
 
-openai.apiKey = 'your_api_key_here';
+openai.apiKey = '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';
