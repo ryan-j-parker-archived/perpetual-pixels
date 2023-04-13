@@ -81,7 +81,7 @@ import React, { useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { BoxBufferGeometry, MeshStandardMaterial } from 'three';
 import * as THREE from 'three';
-import { OrbitControls } from '@react-three/drei';
+import { Environment, OrbitControls } from '@react-three/drei';
 
 function Box({ position }) {
   const meshRef = React.useRef();
@@ -130,12 +130,19 @@ function App() {
         camera={{ position: [0, 0, 5] }}
         className="canvas"
         onCreated={({ gl }) => {
-          gl.setClearColor('lightblue');
+          // gl.setClearColor('lightblue');
           gl.outputEncoding = THREE.sRGBEncoding;
           gl.toneMapping = THREE.ACESFilmicToneMapping;
         }}
         style={{ height: '100vh', width: '100vw' }}
       >
+        {/* <color attach="background" args={['#02daf4']} />
+        <Environment
+          background
+          files={'./waterworld-bkg.jpg'}
+          // path="/waterworld-bkg.jpg"
+          options={{ format: 'jpg' }}
+        /> */}
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
         {boxes.map((box) => (
