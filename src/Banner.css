@@ -1,0 +1,15 @@
+.wrapper {
+  padding: 10px;
+  background-color: pink;
+  text-shadow: 0px 0px 0.75px whitesmoke;
+}
+
+.r3f {
+  background-color: indianred;
+  color: rgb(124, 242, 255);
+}
+
+.flamingo {
+  background-color: salmon;
+  color: rgb(122, 158, 255);
+}
